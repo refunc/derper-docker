@@ -1,4 +1,4 @@
-FROM golang:17 AS builder
+FROM golang:1.17 AS builder
 WORKDIR /app
 
 # https://tailscale.com/kb/1118/custom-derp-servers/
