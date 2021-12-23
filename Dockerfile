@@ -1,10 +1,10 @@
-FROM golang:latest AS builder
+FROM golang:17 AS builder
 WORKDIR /app
 
 # https://tailscale.com/kb/1118/custom-derp-servers/
 RUN go install tailscale.com/cmd/derper@main
 
-FROM ubuntu
+FROM gcr.io/distroless/base-debian11
 WORKDIR /app
 
 RUN mkdir /app/cert

@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   schedule:
-    # Runs "at minute 55 past every hour" (see https://crontab.guru)
+    # Runs “At 00:00 on Monday.” (see https://crontab.guru)
     - cron: '0 0 * * MON'
 jobs:
   build:
@@ -34,6 +34,6 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/fredliang44/derper:latest
-            fredliang/derper:latest
-            fredliang/derper:${{ github.sha }}
+            ghcr.io/refunc/derper:latest
+            refunc/derper:latest
+            refunc/derper:${{ github.sha }}
