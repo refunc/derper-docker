@@ -13,4 +13,5 @@ COPY --from=builder --chown=nonroot:nonroot /app /app
 
 COPY --from=builder /go/bin/derper .
 
-ENTRYPOINT /app/derper
+# https://github.com/GoogleContainerTools/distroless#entrypoints
+ENTRYPOINT ["/app/derper"]

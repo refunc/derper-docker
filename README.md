@@ -6,8 +6,6 @@ Forked from fredliang44/derper-docker
 
 # Setup
 
-> required: set env `DERP_HOSTNAME` to your domain
-
 ```bash
 docker run -p 80:80 -p 443:443 -p 3478:3478 refunc/derper --hostname your-hostname.com --certmode letsencrypt --certdir /app/certs  --a :443 --stun true
 ```
